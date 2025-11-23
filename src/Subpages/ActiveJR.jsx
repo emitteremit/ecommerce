@@ -2,8 +2,8 @@ import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import { Link } from 'react-router-dom'
-import img1 from '../../public/Sneakers.jpg';
-import img2 from '../../public/Sneakers2.jpg';
+import img1 from '../assets/Sneakers.jpg';
+import img2 from '../assets/Sneakers2.jpg';
 import ProductDetails from '../Components/ProductDetails'
 
 const ActiveJR = () => {

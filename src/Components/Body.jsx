@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import img1 from '../../public/hero.jpg';
-import img2 from '../../public/sneakers2.jpg';
-import img3 from '../../public/sneakers3.jpg'
-import img4 from '../../public/sneakers4.jpg'
-import img5 from '../../public/sneakers5.jpg'
-import img6 from '../../public/Kids.jpg'
-import img7 from '../../public/img7.png'
+import img1 from '../assets/hero.jpg';
+import img2 from '../assets/sneakers2.jpg';
+import img3 from '../assets/sneakers3.jpg'
+import img4 from '../assets/sneakers4.jpg'
+import img5 from '../assets/sneakers5.jpg'
+import img6 from '../assets/Kids.jpg'
+import img7 from '../assets/img7.png'
 import { Link } from 'react-router-dom';
 import 'aos/dist/aos.css';
 import { FaLongArrowAltRight } from 'react-icons/fa';
