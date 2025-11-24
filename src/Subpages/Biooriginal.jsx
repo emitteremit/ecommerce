@@ -2,14 +2,14 @@ import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import { Link } from 'react-router-dom'
-import img1 from '../assets/sneakers.jpg'
-import img2 from '../assets/sneakers.jpg';
+import img1 from '../assets/sneakers3.jpg'
+import img2 from '../assets/sneakes3sub.jpg';
 import ProductDetails from '../Components/ProductDetails'
 
 const Biooriginal = () => {
     const images = [img1, img2];
     const productName = 'Bio Original';
-    const price = 99.00;
+    const price = 109.00;
     const originalPrice = 119.00;
     return (
         <>

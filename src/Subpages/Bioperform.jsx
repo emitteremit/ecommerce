@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
-import img1 from '../assets/Sneakers.jpg';
-import img2 from '../assets/Sneakers2.jpg';
+import img1 from '../assets/sneakers4.jpg';
+import img2 from '../assets/sneakers4sub.jpg';
 import { Link } from 'react-router-dom';
 import ProductDetails from '../Components/ProductDetails';
 

@@ -3,14 +3,14 @@ import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import ProductDetails from '../Components/ProductDetails'
 import { Link } from 'react-router-dom'
-import img1 from '../assets/Sneakers.jpg';
-import img2 from '../assets/Sneakers2.jpg';
+import img1 from '../assets/sneakers5.jpg';
+import img2 from '../assets/sneakers5sub.jpg';
 
 const LimtedDl = () => {
     const images = [img1, img2];
     const productName = 'Limited DL';
-    const price = 99.00;
-    const originalPrice = 119.00;
+    const price = 119.00;
+    const originalPrice = 129.00;
   return (
     <>
         <Header/>

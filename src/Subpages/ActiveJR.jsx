@@ -2,15 +2,15 @@ import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import { Link } from 'react-router-dom'
-import img1 from '../assets/Sneakers.jpg';
-import img2 from '../assets/Sneakers2.jpg';
+import img1 from '../assets/sneakers1.jpg';
+import img2 from '../assets/snekers1sub.jpg';
 import ProductDetails from '../Components/ProductDetails'
 
 const ActiveJR = () => {
     const images = [img1, img2];
     const productName = 'Active JR';
-    const price = '64.00';
-    const originalPrice = '80.00';
+    const price = 64.00;
+    const originalPrice = 80.00;
     return (
         <>
             <Header />
