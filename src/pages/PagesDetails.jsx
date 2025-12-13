@@ -20,7 +20,7 @@ import img18 from '../assets/sneakers13sub.jpg';
 import img19 from '../assets/sneakers12.jpg';
 import img20 from '../assets/sneakers12Sub.jpg';
 import img21 from '../assets/naturaljr.jpg';
-import img22 from '../assets/naturaljrsub.jpg';
+import img22 from '../assets/naturaljrSub.jpg';
 import img2Hover from '../assets/sneakers1sub.jpg';
 import img3Hover from '../assets/sneakes3sub.jpg';
 import img4Hover from '../assets/sneakers4sub.jpg';

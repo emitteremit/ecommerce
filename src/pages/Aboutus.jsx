@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-import img1 from '../assets/Aboutus.png';
+import img1 from '../assets/aboutus.png';
 import img2 from '../assets/Community.jpg';
 import img3 from '../assets/Sustainability.jpg';
 import img4 from '../assets/Quality.jpg';
@@ -13,7 +13,7 @@ const Aboutus = () => {
         Aos.init({
           once: false,
           duration: 1000,
-        });hb
+        });
       }, []);
     const aboutuse = [
         {
