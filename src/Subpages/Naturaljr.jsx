@@ -3,7 +3,7 @@ import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import ProductDetails from '../Components/ProductDetails'
 import img1 from '../assets/naturaljr.jpg';
-import img2 from '../assets/naturaljrsub.jpg';
+import img2 from '../assets/naturaljrSub.jpg';
 import BreadCrumbs from '../Components/BreadCrumbs'
 
 const Naturaljr = () => {
