@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
-import Breadcrumbs from '../Components/Breadcrumb'
 import ProductDetails from '../Components/ProductDetails'
 import img1 from '../assets/naturaljr.jpg';
 import img2 from '../assets/naturaljrsub.jpg';
+import BreadCrumbs from '../Components/BreadCrumbs'
 
 const Naturaljr = () => {
     const images = [img1, img2];
@@ -33,7 +33,7 @@ const Naturaljr = () => {
             </div>
 
             {/* Breadcrumb */}
-            <Breadcrumbs items={breadcrumbItems} />
+            <BreadCrumbs items={breadcrumbItems} />
 
             <div>
                 <ProductDetails

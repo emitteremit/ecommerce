@@ -4,7 +4,7 @@ import Footer from '../Components/Footer'
 import ProductDetails from '../Components/ProductDetails';
 import img1 from '../assets/sneakers8.jpg';
 import img2 from '../assets/sneakers8Sub.jpg';
-import Breadcrumbs from '../Components/Breadcrumb';
+import BreadCrumbs from '../Components/BreadCrumbs';
 
 const ArtisanalDl = () => {
     const images = [img1, img2];
@@ -33,7 +33,7 @@ const ArtisanalDl = () => {
             </div>
 
             {/* Breadcrumb */}
-            <Breadcrumbs items={breadcrumbItems} />
+            <BreadCrumbs items={breadcrumbItems} />
 
             <div>
                 <ProductDetails

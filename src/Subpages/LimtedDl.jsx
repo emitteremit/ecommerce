@@ -2,10 +2,9 @@ import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import ProductDetails from '../Components/ProductDetails'
-import { Link } from 'react-router-dom'
 import img1 from '../assets/sneakers5.jpg';
 import img2 from '../assets/sneakers5sub.jpg';
-import Breadcrumbs from '../Components/Breadcrumb'
+import BreadCrumbs from '../Components/BreadCrumbs';
 
 const LimtedDl = () => {
     const images = [img1, img2];
@@ -34,7 +33,7 @@ const LimtedDl = () => {
                 </div>
             </div>
 
-            <Breadcrumbs items={breadcrumbItems}/>
+            <BreadCrumbs items={breadcrumbItems}/>
         <ProductDetails
                 images={images}
                 productName={productName}

@@ -5,7 +5,7 @@ import Footer from '../Components/Footer';
 import img1 from '../assets/sneakers1.jpg';
 import img2 from '../assets/snekers1sub.jpg';
 import ProductDetails from '../Components/ProductDetails';
-import Breadcrumbs from '../Components/Breadcrumb';
+import BreadCrumbs from '../Components/BreadCrumbs';
 
 
 const BioRunner = () => {
@@ -34,7 +34,7 @@ const BioRunner = () => {
                     </p>
                 </div>
             </div>
-            <Breadcrumbs items={breadcrumbItems}/>
+            <BreadCrumbs items={breadcrumbItems}/>
             <ProductDetails
                 images={images}
                 productName={productName}

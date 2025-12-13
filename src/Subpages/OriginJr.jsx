@@ -2,9 +2,9 @@ import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import ProductDetails from '../Components/ProductDetails'
-import Breadcrumbs from '../Components/Breadcrumb'
 import img1 from '../assets/sneakers12.jpg';
 import img2 from '../assets/sneakers12Sub.jpg';
+import BreadCrumbs from '../Components/BreadCrumbs'
 
 const OriginJr = () => {
     const images = [img1, img2];
@@ -32,7 +32,7 @@ const OriginJr = () => {
             </div>
 
             {/* Breadcrumb */}
-            <Breadcrumbs items={breadcrumbItems} />
+            <BreadCrumbs items={breadcrumbItems} />
 
             <div>
                 <ProductDetails

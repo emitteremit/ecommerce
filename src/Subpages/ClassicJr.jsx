@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
-import Breadcrumbs from '../Components/Breadcrumb';
 import ProductDetails from '../Components/ProductDetails';
 import img1 from '../assets/sneakers13.jpg';
 import img2 from '../assets/sneakers13sub.jpg';
+import BreadCrumbs from '../Components/BreadCrumbs';
 
 const ClassicJr = () => {
     const images = [img1, img2];
@@ -33,7 +33,7 @@ const ClassicJr = () => {
             </div>
 
             {/* Breadcrumb */}
-            <Breadcrumbs items={breadcrumbItems} />
+            <BreadCrumbs items={breadcrumbItems} />
 
             <div>
                 <ProductDetails

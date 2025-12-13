@@ -5,7 +5,7 @@ import img1 from '../assets/sneakers7.jpg'
 import img2 from '../assets/sneakers&Sub.jpg'
 import { Link } from 'react-router-dom'
 import ProductDetails from '../Components/ProductDetails'
-import Breadcrumbs from '../Components/Breadcrumb'
+import BreadCrumbs from '../Components/BreadCrumbs'
 
 const SignalDL = () => {
     const images = [img1, img2];
@@ -32,7 +32,7 @@ const SignalDL = () => {
                     </p>
                 </div>
             </div>
-            <Breadcrumbs items={breadcrumbItems}/>
+            <BreadCrumbs items={breadcrumbItems}/>
             <div>
                 <ProductDetails
                 images={images}

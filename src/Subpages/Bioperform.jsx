@@ -3,9 +3,9 @@ import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import img1 from '../assets/sneakers4.jpg';
 import img2 from '../assets/sneakers4sub.jpg';
-import { Link } from 'react-router-dom';
+
 import ProductDetails from '../Components/ProductDetails';
-import Breadcrumbs from '../Components/Breadcrumb';
+import BreadCrumbs from '../Components/BreadCrumbs';
 
 const Bioperform = () => {
     const images = [img1, img2];
@@ -34,7 +34,7 @@ const Bioperform = () => {
                 </div>
             </div>
 
-            <Breadcrumbs items={breadcrumbItems}/>
+            <BreadCrumbs items={breadcrumbItems}/>
             <ProductDetails
                 images={images}
                 productName={productName}

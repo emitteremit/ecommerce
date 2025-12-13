@@ -1,8 +1,9 @@
 import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
-import Breadcrumbs from '../Components/Breadcrumb'
+
 import { useCart } from '../Components/CartContext';
+import BreadCrumbs from '../Components/BreadCrumbs';
 
 const Checkout = () => {
     const { cartItems, removeFromCart, updateQuantity, getCartTotal, clearCart } = useCart();
@@ -13,7 +14,7 @@ const Checkout = () => {
     return (
         <>
             <Header />
-            <Breadcrumbs items={breadcrumbItems} />
+            <BreadCrumbs items={breadcrumbItems} />
             <div className='bg-[#F0F0F0] w-[100%] max-w-[700px] h-[100%] max-h-[500px] rounded-lg shadow md:mx-auto mx-[10px]'>
                 <div className='space-y-3 mb-4 p-5'>
                     <div className='flex justify-between'>

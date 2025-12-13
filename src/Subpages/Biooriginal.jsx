@@ -1,11 +1,10 @@
 import React from 'react'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
-import { Link } from 'react-router-dom'
 import img1 from '../assets/sneakers3.jpg'
 import img2 from '../assets/sneakes3sub.jpg';
 import ProductDetails from '../Components/ProductDetails'
-import Breadcrumbs from '../Components/Breadcrumb'
+import BreadCrumbs from '../Components/BreadCrumbs'
 
 const Biooriginal = () => {
     const images = [img1, img2];
@@ -33,7 +32,7 @@ const Biooriginal = () => {
                     </p>
                 </div>
             </div>
-            <Breadcrumbs items={breadcrumbItems}/>
+            <BreadCrumbs items={breadcrumbItems}/>
             <div>
                 <ProductDetails 
                 images={images}

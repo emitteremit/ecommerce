@@ -2,10 +2,10 @@
 import React from 'react';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-import Breadcrumb from '../Components/Breadcrumb';
 import img1 from '../assets/sneakers2.jpg';
 import img2 from '../assets/sneakers1sub.jpg';
 import ProductDetails from '../Components/ProductDetails';
+import BreadCrumbs from '../Components/BreadCrumbs';
 // import ProductDetails from '../Components/ProductDetails';
 
 const ActiveJR = () => {
@@ -36,7 +36,7 @@ const ActiveJR = () => {
             </div>
 
             {/* Breadcrumb */}
-            <Breadcrumb items={breadcrumbItems} />
+            <BreadCrumbs items={breadcrumbItems} />
 
             <div>
                 <ProductDetails
