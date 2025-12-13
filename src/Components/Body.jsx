@@ -164,7 +164,7 @@ const Body = () => {
             </Link>
           </div>
           <div data-aos='fade-left' data-aos-delay='1000' data-aos-duration='1000' className='md:mt-0 lg:mt-0  mt-[40px]'>
-            <img src={img6} alt="" className='rounded-[20px] w-full lg:h-[500px] md:h-[400px] h-[550px]' />
+            <img src={img6} alt="" className='rounded-[20px] w-full lg:h-[500px] md:h-[400px] h-[470px]' />
           </div>
         </div>
       </div>
