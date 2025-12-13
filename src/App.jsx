@@ -6,7 +6,7 @@ import ActiveJR from './Subpages/ActiveJR';
 import Biooriginal from './Subpages/Biooriginal';
 import Bioperform from './Subpages/Bioperform';
 import LimtedDl from './Subpages/LimtedDl';
-import Bestsellers from './pages/Bestsellers';
+// import Bestsellers from './pages/Bestsellers';
 import Shopall from './pages/Shopall';
 import ActiveQxP from './pages/ActiveQxP';
 import Artisanal from './pages/Artisanal';
@@ -22,6 +22,7 @@ import Naturaljr from './Subpages/Naturaljr';
 import ClassicJr from './Subpages/ClassicJr';
 import OriginJr from './Subpages/OriginJr';
 import Checkout from './pages/Checkout';
+import BestSellers from './pages/Bestsellers';
 
 function App() {
 
@@ -39,7 +40,7 @@ function App() {
             <Route path='/biooriginal' element={<Biooriginal />} />
             <Route path='/bioperform' element={<Bioperform />} />
             <Route path='/limitedDl' element={<LimtedDl />} />
-            <Route path='/bestsellers' element={<Bestsellers />} />
+            <Route path='/bestsellers' element={<BestSellers />} />
             <Route path='/shopall' element={<Shopall />} />
             <Route path='/activeqxp' element={<ActiveQxP />} />
             <Route path='/artisanal' element={<Artisanal />} />

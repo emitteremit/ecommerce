@@ -3,7 +3,7 @@ import Footer from '../Components/Footer'
 import Header from '../Components/Header'
 import BestsellersDetails from './PagesDetails'
 
-const Bestsellers = () => {
+const BestSellers = () => {
   return (
     <div>
       <Header />
@@ -26,4 +26,4 @@ const Bestsellers = () => {
   )
 }
 
-export default Bestsellers
+export default BestSellers
