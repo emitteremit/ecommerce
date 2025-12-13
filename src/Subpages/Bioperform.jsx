@@ -5,16 +5,23 @@ import img1 from '../assets/sneakers4.jpg';
 import img2 from '../assets/sneakers4sub.jpg';
 import { Link } from 'react-router-dom';
 import ProductDetails from '../Components/ProductDetails';
+import Breadcrumbs from '../Components/Breadcrumb';
 
 const Bioperform = () => {
     const images = [img1, img2];
     const productName = 'Bio-Perform';
     const price = 99.00;
     const originalPrice = 119.00;
+    const breadcrumbItems = [
+        { label: 'All products', link: '/shopall' }, // Category page
+        { label: 'Active Qx', link: '/activeqxp' }, 
+        { label: 'Best Seller', link: '/bestSellers' }, // Category page
+        { label: 'Bio Perform', link: null } // Current product (no link)
+    ];
     return (
         <>
             <Header />
-            <div className='bg-black overflow-hidden'>
+            <div className='bg-[#282828] overflow-hidden'>
                 <div className='animate-marquee whitespace-nowrap'>
                     <p className='text-white text-xl inline-block px-8 py-2'>
                         FREE SHIPPING ON ALL INTERNATIONAL ORDER OVER $35
@@ -27,9 +34,7 @@ const Bioperform = () => {
                 </div>
             </div>
 
-            <div className='mx-[50px] mb-[20px] mt-[50px]'>
-                <Link to='/' className='hover:underline'>Home</Link> / <Link to='/biorunner' className='hover:underline'>Bio-Perform</Link>
-            </div>
+            <Breadcrumbs items={breadcrumbItems}/>
             <ProductDetails
                 images={images}
                 productName={productName}

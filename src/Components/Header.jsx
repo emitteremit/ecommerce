@@ -1,24 +1,28 @@
 import React from 'react';
 import { BsHeart } from 'react-icons/bs';
+import { FaSearch, FaShoppingCart } from 'react-icons/fa';
 import { MdAccountCircle } from 'react-icons/md';
-import { PiLockKeyThin } from 'react-icons/pi';
 import { Link } from 'react-router-dom';
+import { useCart } from './CartContext';
 
 const Header = () => {
+  const { getCartCount, setIsCartOpen } = useCart();
+
   return (
-    <>
-      
+    <> 
       <div className='flex justify-between items-center px-8 py-5'>
         <div>
-          <p className='font-bold text-[40px] font-mono'>QUENX</p>
+          <Link to='/'>
+            <p className='font-bold text-[40px] font-mono'>QUENX</p>
+          </Link>
         </div>
         <div className='hidden lg:flex gap-8'>
-          <Link className='hover:underline font-semibold'>Shop All</Link>
-          <Link className='hover:underline font-semibold'>Best Sellers</Link>
-          <Link className='hover:underline font-semibold'>Active QX</Link>
-          <Link className='hover:underline font-semibold'>Artisanal</Link>
-          <Link className='hover:underline font-semibold'>Kids</Link>
-          <Link className='hover:underline font-semibold'>About Us</Link>
+          <Link to={'/shopall'} className='hover:underline text-sm '>Shop All</Link>
+          <Link to={'/bestsellers'} className='hover:underline text-sm '>Best Sellers</Link>
+          <Link to={'/activeqxp'}className='hover:underline text-sm '>Active QX</Link>
+          <Link to={'/artisanal'}className='hover:underline text-sm '>Artisanal</Link>
+          <Link to={'/kids'}className='hover:underline text-sm '>Kids</Link>  
+          <Link to={'/Aboutus'}className='hover:underline text-sm '>About Us</Link>
         </div>
         <div className='flex items-center gap-3'>
           <form className="max-w-md mx-auto hidden md:block">
@@ -31,15 +35,25 @@ const Header = () => {
             </div>
           </form>
           <div className='flex justify-between items-center gap-2 md:gap-3'>
-            <Link>Log in</Link>
-            <Link>
+            <Link to='/login' className='hidden md:inline-block'>Log in</Link>
+            <Link className='lg:hidden md:hidden '><FaSearch/></Link>
+            <Link to='/account' className='hidden md:block'>
               <MdAccountCircle size={'32px'} />
             </Link>
-            <Link>
+            <Link to='/wishlist'>
               <BsHeart size={'20px'} />
             </Link>
-            <Link>
-              <PiLockKeyThin size={'32px'} />
+            {/* Cart Icon with Badge */}
+            <Link 
+              to='/CartPage'
+              className='relative'
+            >
+              <FaShoppingCart size={'24px'} />
+              {getCartCount() > 0 && (
+                <span className='absolute -top-2 -right-2 bg-blue-700 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold'>
+                  {getCartCount()}
+                </span>
+              )}
             </Link>
             <label htmlFor="offcanvas-toggle" className="cursor-pointer lg:hidden">
               <svg xmlns="" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -53,22 +67,38 @@ const Header = () => {
         <input type="checkbox" id="offcanvas-toggle" className="hidden peer" />
 
         <div className="fixed top-0 right-0 z-40 w-full h-screen p-4 bg-white border-l border-gray-200 dark:border-gray-700 dark:bg-gray-800 transform translate-x-full transition-transform duration-300 peer-checked:translate-x-0">
-          <label className="flex justify-end mb-4 cursor-pointer text-white" htmlFor="offcanvas-toggle">
-            <svg xmlns="" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </label>
-          <div className='flex items-center mb-8 gap-2'>
-            <MdAccountCircle size={'32px'} className='text-white' />
-            <Link className='text-xl text-white'>Log in</Link>
+          <div className='flex justify-between items-center mb-8 gap-2 mt-[30px]'>
+            <div className='flex items-center gap-2'>
+              <MdAccountCircle size={'32px'} className='text-white' />
+              <Link to='/login' className='text-xl text-white'>Log in</Link>
+            </div>
+            <label className="flex justify-end mb-4 cursor-pointer text-white" htmlFor="offcanvas-toggle">
+              <svg xmlns="" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </label>
           </div>
           <div className='flex flex-col gap-6 text-white'>
-            <Link className='hover:underline font-semibold'>Shop All</Link>
-            <Link className='hover:underline font-semibold'>Best Sellers</Link>
-            <Link className='hover:underline font-semibold'>Active QX</Link>
-            <Link className='hover:underline font-semibold'>Artisanal</Link>
-            <Link className='hover:underline font-semibold'>Kids</Link>
-            <Link className='hover:underline font-semibold'>About Us</Link>
+            <Link to={'/shopall'} className='hover:underline text-sm '>Shop All</Link>
+            <Link to={'/bestsellers'} className='hover:underline text-sm '>Best Sellers</Link>
+            <Link to={'/activeqxp'}className='hover:underline text-sm '>Active QX</Link>
+            <Link to={'/artisanal'}className='hover:underline text-sm '>Artisanal</Link>
+            <Link to={'/kids'}className='hover:underline text-sm '>Kids</Link>
+            <Link to={'/Aboutus'}className='hover:underline text-sm '>About Us</Link>
+            
+            {/* Mobile Cart Link */}
+            <Link 
+              to='/cart'
+              onClick={() => document.getElementById('offcanvas-toggle').checked = false}
+              className='hover:underline text-sm text-left flex items-center gap-2'
+            >
+              Cart
+              {getCartCount() > 0 && (
+                <span className='bg-blue-700 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold'>
+                  {getCartCount()}
+                </span>
+              )}
+            </Link>
           </div>
         </div>
       </div>

@@ -1,14 +1,15 @@
 import React from 'react'
-import Header from '../Components/Header'
-import Body from '../Components/Body'
 import Footer from '../Components/Footer'
+import Header from '../Components/Header'
+import BestsellersDetails from './PagesDetails'
 
-const Homepage = () => {
+const Bestsellers = () => {
   return (
-    <>
+    <div>
+      <Header />
       <div className='bg-[#282828] overflow-hidden'>
         <div className='animate-marquee whitespace-nowrap'>
-          <p className='text-white text-xl inline-block px-8 py-4'>
+          <p className='text-white text-xl inline-block px-8 py-2'>
             FREE SHIPPING ON ALL INTERNATIONAL ORDER OVER $35
             * FREE SHIPPING ON ALL INTERNATIONAL ORDER OVER $35
             * FREE SHIPPING ON ALL INTERNATIONAL ORDER OVER $35
@@ -18,11 +19,11 @@ const Homepage = () => {
           </p>
         </div>
       </div>
-      <Header />
-      <Body />
+      <BestsellersDetails activeCategory="bestsellers" />;
+
       <Footer />
-    </>
+    </div>
   )
 }
 
-export default Homepage
+export default Bestsellers

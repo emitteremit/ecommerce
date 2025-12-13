@@ -5,16 +5,23 @@ import ProductDetails from '../Components/ProductDetails'
 import { Link } from 'react-router-dom'
 import img1 from '../assets/sneakers5.jpg';
 import img2 from '../assets/sneakers5sub.jpg';
+import Breadcrumbs from '../Components/Breadcrumb'
 
 const LimtedDl = () => {
     const images = [img1, img2];
     const productName = 'Limited DL';
     const price = 119.00;
     const originalPrice = 129.00;
+    const breadcrumbItems = [
+        { label: 'All Products', link: '/shopall' }, 
+        { label: 'Artisanal', link: '/artisanal' },
+        { label: 'Best Seller', link: '/bestSellers' },  // Category page
+        { label: 'Limited DL', link: null } // Current product (no link)
+    ];
   return (
     <>
         <Header/>
-        <div className='bg-black overflow-hidden'>
+        <div className='bg-[#282828] overflow-hidden'>
                 <div className='animate-marquee whitespace-nowrap'>
                     <p className='text-white text-xl inline-block px-8 py-2'>
                         FREE SHIPPING ON ALL INTERNATIONAL ORDER OVER $35
@@ -27,9 +34,7 @@ const LimtedDl = () => {
                 </div>
             </div>
 
-            <div className='mx-[50px] mb-[20px] mt-[50px]'>
-                <Link to='/' className='hover:underline'>Home</Link> / <Link to='/limiteddl' className='hover:underline'>Limited-DL</Link>
-            </div>
+            <Breadcrumbs items={breadcrumbItems}/>
         <ProductDetails
                 images={images}
                 productName={productName}

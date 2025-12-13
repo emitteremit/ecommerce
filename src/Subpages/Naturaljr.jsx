@@ -1,31 +1,28 @@
-// Pages/ActiveJR.js
-import React from 'react';
-import Header from '../Components/Header';
-import Footer from '../Components/Footer';
-import Breadcrumb from '../Components/Breadcrumb';
-import img1 from '../assets/sneakers2.jpg';
-import img2 from '../assets/sneakers1sub.jpg';
-import ProductDetails from '../Components/ProductDetails';
-// import ProductDetails from '../Components/ProductDetails';
+import React from 'react'
+import Header from '../Components/Header'
+import Footer from '../Components/Footer'
+import Breadcrumbs from '../Components/Breadcrumb'
+import ProductDetails from '../Components/ProductDetails'
+import img1 from '../assets/naturaljr.jpg';
+import img2 from '../assets/naturaljrsub.jpg';
 
-const ActiveJR = () => {
+const Naturaljr = () => {
     const images = [img1, img2];
-    const productName = 'Active JR';
+    const productName = 'Natural Jr';
     const price = 64.00;
     const originalPrice = 80.00;
 
     // Breadcrumb trail - shows where this product came from
     const breadcrumbItems = [
         { label: 'All Products', link: '/shopall' }, // Category page
-        { label: 'Best Seller', link: '/bestSellers' }, // Category page
         { label: 'Kids', link: '/kids' }, // Category page
-        { label: 'Active JR', link: null } // Current product (no link)
+        { label: 'Natural JR', link: null } // Current product (no link)
     ];
 
-    return (
-        <>
-            <Header />
-            <div className='bg-[#282828] overflow-hidden'>
+  return (
+    <>
+    <Header/>
+    <div className='bg-[#282828] overflow-hidden'>
                 <div className='animate-marquee whitespace-nowrap'>
                     <p className='text-white text-xl inline-block px-8 py-2'>
                         FREE SHIPPING ON ALL INTERNATIONAL ORDER OVER $35
@@ -36,7 +33,7 @@ const ActiveJR = () => {
             </div>
 
             {/* Breadcrumb */}
-            <Breadcrumb items={breadcrumbItems} />
+            <Breadcrumbs items={breadcrumbItems} />
 
             <div>
                 <ProductDetails
@@ -47,9 +44,9 @@ const ActiveJR = () => {
                     originalPrice={originalPrice}
                 />
             </div>
-            <Footer />
-        </>
-    );
-};
+    <Footer/>
+    </>
+  )
+}
 
-export default ActiveJR;
+export default Naturaljr
